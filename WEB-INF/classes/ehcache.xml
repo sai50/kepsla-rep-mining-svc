@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="true"
+	monitoring="autodetect" dynamicConfig="true">
+
+	<diskStore path="java.io.tmpdir" />
+
+	<cache name="dashboard" maxEntriesLocalHeap="1000"
+		maxEntriesLocalDisk="100000" eternal="false" diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="600" timeToLiveSeconds="3600"
+		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	<cache name="tradeReviews" maxEntriesLocalHeap="1000"
+		maxEntriesLocalDisk="100000" eternal="false" diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="600" timeToLiveSeconds="3600"
+		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	<cache name="comparativeAnalysis" maxEntriesLocalHeap="1000"
+		maxEntriesLocalDisk="100000" eternal="false" diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="600" timeToLiveSeconds="3600"
+		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	<cache name="reviewSummary" maxEntriesLocalHeap="1000"
+		maxEntriesLocalDisk="100000" eternal="false" diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="600" timeToLiveSeconds="3600"
+		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	<cache name="kpiAndDepartment" maxEntriesLocalHeap="1000"
+		maxEntriesLocalDisk="100000" eternal="false" diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="600" timeToLiveSeconds="3600"
+		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	<cache name="manageMilestones" maxEntriesLocalHeap="1000"
+		maxEntriesLocalDisk="100000" eternal="false" diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="600" timeToLiveSeconds="3600"
+		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	<cache name="milestoneHistory" maxEntriesLocalHeap="1000"
+		maxEntriesLocalDisk="100000" eternal="false" diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="600" timeToLiveSeconds="3600"
+		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	<cache name="manageUsers" maxEntriesLocalHeap="1000"
+		maxEntriesLocalDisk="100000" eternal="false" diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="600" timeToLiveSeconds="3600"
+		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	<cache name="notifications" maxEntriesLocalHeap="1000"
+		maxEntriesLocalDisk="100000" eternal="false" diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="600" timeToLiveSeconds="3600"
+		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	<cache name="sourceFactor" maxEntriesLocalHeap="1000"
+		maxEntriesLocalDisk="100000" eternal="false" diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="600" timeToLiveSeconds="3600"
+		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	<cache name="languageFactor" maxEntriesLocalHeap="1000"
+		maxEntriesLocalDisk="100000" eternal="false" diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="600" timeToLiveSeconds="3600"
+		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	<cache name="socialMentions" maxEntriesLocalHeap="1000"
+		maxEntriesLocalDisk="100000" eternal="false" diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="600" timeToLiveSeconds="3600"
+		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	<cache name="sourceMaster" maxEntriesLocalHeap="1000"
+		maxEntriesLocalDisk="100000" eternal="false" diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="600" timeToLiveSeconds="3600"
+		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	<cache name="departments" maxEntriesLocalHeap="1000"
+		maxEntriesLocalDisk="100000" eternal="false" diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="600" timeToLiveSeconds="3600"
+		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	<cache name="kpis" maxEntriesLocalHeap="1000"
+		maxEntriesLocalDisk="100000" eternal="false" diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="600" timeToLiveSeconds="3600"
+		memoryStoreEvictionPolicy="LFU" transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	<cache name="organization" 
+		maxEntriesLocalHeap="1000"
+		maxEntriesLocalDisk="100000" 
+		eternal="false" 
+		diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="600" timeToLiveSeconds="3600"
+		memoryStoreEvictionPolicy="LFU" 
+		transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+</ehcache>

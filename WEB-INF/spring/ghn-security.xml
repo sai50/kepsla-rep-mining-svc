@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<security:http  pattern="/user/generateHashTag" security="none"/>
+	<security:http  pattern="/user/showUserHashTags" security="none"/>
+	<security:http  pattern="/refreshCacheController/refresh" security="none"/>
+	<security:http use-expressions="true">
+		<security:access-denied-handler error-page="/403.jsp" />
+		<security:http-basic />
+		<!-- <security:csrf /> -->
+		<security:headers>
+			<!-- <security:frame-options /> -->
+			<security:xss-protection/>	
+		</security:headers>
+    	<security:custom-filter position="PRE_AUTH_FILTER" ref="preAuthenticationFilter" />
+		<security:custom-filter ref="xssFilter" before="LAST" />
+		<security:custom-filter ref="customSecurityFilter" position="LAST" />
+		<security:session-management invalid-session-url="/" />
+		<security:logout invalidate-session="true" logout-success-url="/" />
+		<security:form-login authentication-failure-url="/main/failLogin.htm" login-page="/" 
+			default-target-url="/main/homePage.htm" />
+	    <security:remember-me key="uniqueAndSecret" token-validity-seconds="1209600" remember-me-parameter="remember-me" />	
+	</security:http>
+
+	
+	<bean id="webexpressionHandler" class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler" /> 
+	
+	<!-- Custom filter to deny unwanted users even though registered -->
+	<bean id="customSecurityFilter" class="com.ghn.repufact.common.SecurityFilter"></bean>
+	
+	<bean id="xssFilter" class="com.ghn.repufact.common.XSSFilter"></bean>
+	
+	<bean id="roleVoter" class="org.springframework.security.access.vote.RoleVoter">
+		<property name="rolePrefix" value="" />
+	</bean>
+
+	<security:authentication-manager alias="authenticationManager">
+		<security:authentication-provider>
+			<security:password-encoder hash="bcrypt" />
+			<security:jdbc-user-service
+				data-source-ref="ghnDataSource"
+				users-by-username-query="SELECT USER_NAME AS USERNAME, PASSWORD, ENABLED FROM GHN_USER where USER_NAME= ?"
+				authorities-by-username-query="SELECT user.USER_NAME as username, role.ROLE FROM GHN_USER_ROLE_MAPPING mapping, 
+				 GHN_ROLE role, GHN_USER user WHERE mapping.USER_ID=user.ID AND 
+                  mapping.ROLE_ID = role.ID
+                 AND   user.USER_NAME = ?" />
+		</security:authentication-provider>
+		<security:authentication-provider ref="preAuthenticationProvider" />		
+	</security:authentication-manager>
+	
+	<security:global-method-security>
+		<security:protect-pointcut access="isAuthenticated()" expression="execution(* com.ghn.repufact.*.*Service.*(..))" />
+	</security:global-method-security>
+
+
+	<bean id="preAuthenticationFilter" class="com.ghn.repufact.common.preauthentication.PreAuthenticationProcessingFilter">
+	    <property name="authenticationManager" ref="authenticationManager" />
+	    <property name="checkForPrincipalChanges" value="true" />
+	</bean>
+	
+	<bean id="preAuthenticationProvider" class="org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationProvider">
+        <property name="preAuthenticatedUserDetailsService" ref="preAuthenticationUserDetailsService"/>
+    </bean>
+    
+    <bean id="preAuthenticationUserDetailsService"  class="com.ghn.repufact.common.preauthentication.PreAuthenticationUserDetailService" >
+    	<property name="jdbcTemplate" ref="jdbcTemplate"/>    
+    </bean>
+
+</beans>

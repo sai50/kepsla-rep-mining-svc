@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:property-placeholder location="classpath:database.properties" />
+	
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<!-- 
+	<bean id="ghnDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${jdbc.driverClassName}"></property>
+		<property name="url" value="${jdbc.url}"></property>
+		<property name="username" value="${jdbc.username}"></property>
+		<property name="password" value=""></property>
+	</bean>
+	 -->
+	 
+	<bean id="ghnDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+		destroy-method="close" 
+		p:driverClass="${jdbc.driverClassName}"
+		p:jdbcUrl="${jdbc.url}" 
+		p:user="${jdbc.username}" 
+		p:password="${jdbc.password}"
+		p:acquireIncrement="5" 
+		p:preferredTestQuery="SELECT 1"
+		p:idleConnectionTestPeriod="200" 
+		p:maxIdleTime="3600"
+		p:maxConnectionAge="3600" 
+		p:testConnectionOnCheckout="false"
+		p:acquireRetryDelay="1000" 
+		p:acquireRetryAttempts="30"
+		p:breakAfterAcquireFailure="false" 
+		p:maxPoolSize="100"
+		p:maxStatements="0"
+		p:maxStatementsPerConnection="2000"
+		p:numHelperThreads="6"
+		p:unreturnedConnectionTimeout="3600" 
+		p:minPoolSize="20" />
+	
+	<bean id="transactionManager"
+			class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
+			p:dataSource="dataSource" p:dataSource-ref="ghnDataSource">
+	</bean>
+
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<constructor-arg ref="ghnDataSource" />
+	</bean>
+	
+	<bean id="namedParameterJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+		<constructor-arg ref="ghnDataSource" />
+	</bean>
+
+</beans>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration>
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- Appenders -->
+	<!-- =======================CONSOLE INFO APPENDER======================== -->
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<param name="Threshold" value="ALL" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%5p] [%d{yyyy-MM-dd HH:mm:ss}] (%F:%M:%L) %m%n" />
+		</layout>
+		<!-- <filter class="org.apache.log4j.varia.LevelRangeFilter"> <param name="levelMin" 
+			value="INFO" /> <param name="levelMax" value="INFO" /> </filter> -->
+	</appender>
+
+	<!-- =======================INFO LOGGER======================= -->
+	<appender name="fileAppenderInfo" class="org.apache.log4j.RollingFileAppender">
+		<param name="file" value="/home/centos/Repufact-Dev-Logs/INFO.log " />
+		<param name="maxFileSize" value="10MB"/>
+		<param name="maxBackupIndex" value="10"/>
+		<param name="append" value="true" />
+		<param name="threshold" value="info" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%5p] [%d{yyyy-MM-dd HH:mm:ss}] (%F:%M:%L) %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="levelMin" value="INFO" />
+			<param name="levelMax" value="INFO" />
+		</filter>
+	</appender>
+
+	<!-- =======================ERROR LOGGER======================= -->
+	<appender name="fileAppenderError" class="org.apache.log4j.RollingFileAppender">
+		<param name="file" value="/home/centos/Repufact-Dev-Logs/ERROR.log" />
+		<param name="maxFileSize" value="10MB"/>
+		<param name="maxBackupIndex" value="10"/>
+		<param name="append" value="true" />
+		<param name="threshold" value="error" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%5p] [%d{yyyy-MM-dd HH:mm:ss}] (%F:%M:%L) %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="levelMin" value="ERROR" />
+			<param name="levelMax" value="ERROR" />
+		</filter>
+	</appender>
+
+	<!-- send all error logs to my email address -->
+	<!-- <appender name="mailAppender" class="org.apache.log4j.net.SMTPAppender">
+		<param name="SMTPHost" value="localhost" />
+		<param name="From" value="dev-logs@repufact.com" />
+		<param name="To" value="sudarshan_kumar@stragure.com,nitesh_nandwana@stragure.com,shravan_kumar@stragure.com" />
+		<param name="Subject" value="Repufact-Dev-Error-Logs" />
+		if your buffer contains 50 mails, an email should be sent
+		<param name="BufferSize" value="1000" />
+		send only errors per email
+		<param name="threshold" value="error" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%5p] [%d{yyyy-MM-dd HH:mm:ss}] (%F:%M:%L) %m%n" />
+		</layout>
+	</appender> -->
+
+	<!-- =======================DEBUG LOGGER======================= -->
+	<appender name="fileAppenderDebug" class="org.apache.log4j.RollingFileAppender">
+		<param name="file" value="/home/centos/Repufact-Dev-Logs/DEBUG.log" />
+		<param name="maxFileSize" value="10MB"/>
+		<param name="maxBackupIndex" value="10"/>
+		<param name="append" value="true" />
+		<param name="threshold" value="debug" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%5p] [%d{yyyy-MM-dd HH:mm:ss}] (%F:%M:%L) %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="levelMin" value="DEBUG" />
+			<param name="levelMax" value="DEBUG" />
+		</filter>
+	</appender>
+	
+	<!-- =======================WARN LOGGER======================= -->
+	<appender name="fileAppenderWarn" class="org.apache.log4j.RollingFileAppender">
+		<param name="file" value="/home/centos/Repufact-Dev-Logs/WARNING.log" />
+		<param name="maxFileSize" value="10MB"/>
+		<param name="maxBackupIndex" value="10"/>
+		<param name="append" value="true" />
+		<param name="threshold" value="warn" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%5p] [%d{yyyy-MM-dd HH:mm:ss}] (%F:%M:%L) %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="levelMin" value="WARN" />
+			<param name="levelMax" value="WARN" />
+		</filter>
+	</appender>
+	
+	<!-- Custom Logger -->
+	<appender name="customLogger" class="org.apache.log4j.RollingFileAppender">
+		<param name="file" value="/home/centos/Repufact-Dev-Logs/CUSTOM.log" />
+		<param name="maxFileSize" value="10MB" />
+		<param name="maxBackupIndex" value="10" />
+		<param name="append" value="true" />
+		<param name="threshold" value="INFO" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%5p] [%d{yyyy-MM-dd HH:mm:ss}] (%F:%M:%L) %m%n" />
+		</layout>
+	</appender>
+
+	<category name="customLogCategory" additivity="false">
+		<priority value="ALL"></priority>
+		<appender-ref ref="customLogger" />
+	</category>
+	
+	<logger name="org.springframework">
+		<level value="off"></level>
+	</logger>
+	<logger name="org.hibernate">
+		<level value="off"></level>
+	</logger>
+	<logger name="com.mchange">
+		<level value="off"></level>
+	</logger>
+
+	<root>
+		<priority value="INFO" />
+		<!-- <appender-ref ref="console" />  -->
+		<appender-ref ref="fileAppenderInfo" />
+		<appender-ref ref="fileAppenderDebug" />
+		<appender-ref ref="fileAppenderError" />
+		<!-- <appender-ref ref="mailAppender" /> -->
+		<appender-ref ref="fileAppenderWarn" />
+	</root>
+
+</log4j:configuration>

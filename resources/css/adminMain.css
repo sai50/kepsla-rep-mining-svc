@@ -1,0 +1,130 @@
+/*!
+Stragure CSS admin Pages 
+ */
+
+/******************** Universal Elements************************/
+.SubHeading{
+font-size:12px;
+border-radius: 0px;
+background: none repeat scroll 0 0 #eeeeee;
+border-bottom:solid 1px #dddddd;
+}
+.float-right{
+float:right;
+}
+.panel-admin{
+border:none;
+}
+.panel-admin .nav-tabs a:hover{
+font-size:14px;
+color: #797979;
+}
+.panel-admin .nav-tabs a{
+color: #797979;
+background: #fff;
+}
+.panel-admin .nav-tabs .active a, .panel-admin .nav-tabs .active a:focus, .panel-admin .nav-tabs .active a:active , .panel-admin .nav-tabs .active a:hover{
+font-size:14px;
+color:	#4e4e4e;
+background: #eeeeee;
+border-color:#eeeeee;
+}
+.SubHeading, .table {
+font-size:12px;
+} 
+.SubHeading .navbar-right{
+margin-left:5px;
+}
+.dataTables_filter{
+text-align: right;
+font-size:11px;
+}
+.dataTables_filter input{
+width:200px;
+}
+.dataTables_length{
+font-size:11px;
+
+}
+.dataTables_length > label > select{
+font-size:11px;
+}
+.dataTables_paginate{
+text-align: right;
+}
+.pagination{
+margin:0px;
+font-size:11px;
+color:#a5c756;
+}
+.pagination .paginate_button{
+color:#a5c756;
+}
+#View_Results{
+margin-bottom:15px;
+margin-top:5px;
+}
+label{
+font-weight: normal;
+ margin: 5px 0 0 0;
+}
+.mandatoryField{
+color:red;
+}
+.Action_heading h4{
+border-bottom:1px solid #ffffff;
+padding-bottom:3px;
+padding-left: 15px;
+}
+.btn-group > .AdminAddButton{
+	border: 2px solid #ffffff;
+	border-radius: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	height: 33px;
+	padding: 0;
+	width: 33px;
+}
+.AdminAddButton{
+	border: 2px solid #ffffff;
+	border-radius: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	height: 33px;
+	padding: 0;
+	width: 33px;
+}
+.AdminDeleteButton{
+	border: 2px solid #ffffff;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    height: 33px;
+    padding: 1px 1px 0 0;
+    width: 33px;
+	background:#2c2c2c;
+}
+.AdminInList{
+border: 1px solid #646464;
+}
+.input-sm{
+margin-right:10px;
+}
+.add-arrow-up {
+	border-bottom: 10px solid #cccccc;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    float: right;
+    height: 0;
+    margin-right: 6px;
+    margin-top: -15px;
+    width: 0;
+}
+
+.AdminMainActivity .form-group .float-right{
+	margin-left:5px;
+}
+.AdminMainActivity .form-group .btn-sm{
+	margin-top:3px;
+}
+/****************** END Universal Elements********************/

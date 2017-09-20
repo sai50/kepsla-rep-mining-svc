@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body onload="getRepufactorIframe(1)">
+	<div id="iframe">
+	
+	</div>
+</body>
+<script type="text/javascript">
+	function getRepufactorIframe(organizationId){
+		var xmlHttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+		xmlHttp.onreadystatechange = function(){
+			if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
+				var response = xmlHttp.responseText;
+				var args = response.split("|");
+				if(args[1] == "true"){
+					document.getElementById("iframe").innerHTML = (args[0]);
+					document.getElementById("iframe").style.display = "block";
+				}else
+					document.getElementById("iframe").style.display = "none";
+			}
+		}
+		xmlHttp.open("GET", "http://localhost:8080/ghn-web/public/getRepufactorIframe.htm?organizationId="+organizationId, true);
+		xmlHttp.send();
+	}
+	
+	function getBroadcastedReviews(organizationId){
+		window.open("http://localhost:8080/ghn-web/public/broadcastedReviews.htm?organizationId="+organizationId, "_blank");
+	}
+	
+</script>
+<!-- <iframe src="http://localhost:8080/ghn-web/iframe.html"></iframe> -->
+</html>

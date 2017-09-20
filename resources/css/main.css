@@ -1,0 +1,2607 @@
+/*!
+Stragure CSS admin
+ */
+
+body {
+    background-color: #f8f8f8;
+}
+a, button, .btn{
+cursor:pointer;
+}
+#wrapper {
+    width: 100%;
+}
+
+#page-wrapper {
+    padding: 0 15px;
+    min-height: 568px;
+    background-color: #fff;
+}
+
+@media(min-width:768px) {
+    #page-wrapper {
+        position: inherit;
+        margin: 0 0 0 250px;
+        padding: 0 30px;
+        border-left: 1px solid #e7e7e7;
+    }
+}
+/*!-------Login Page--------------*/
+#canvasBackground {
+			position: fixed; 
+			display:block;
+			top: -50%; 
+			left: -50%; 
+			width: 200%; 
+			height: 200%;
+			}
+#canvasBackground img {
+			position: absolute; 
+			top: 0; 
+			left: 0; 
+			right: 0; 
+			bottom: 0; 
+			margin: auto; 
+			min-width: 50%;
+			min-height: 50%;
+			}
+.login-page-wrapper {
+	background: url('BlueWhiteBg.png') repeat-x #fff;
+}
+.LoginContainer{
+	 background: url('GreyGradationBg.png') repeat-x #f2f2f2;
+	 border-radius:4px;
+	 border:1px solid #e9e9e9;
+	 padding-top:20px;
+	 margin-bottom:7px;
+	 box-shadow: 0 0 3px #ddd;
+	 margin-top:100px;
+}
+.Login-logo{
+	margin-bottom:10px;
+}
+
+@media screen and (max-width: 767px) {
+	.LoginContainer {
+		margin-top:0px;
+	}
+ }
+/*!-------End Login Page--------------*/
+.navbar-top-links li {
+    display: inline-block;
+}
+
+.navbar-top-links li:last-child {
+    margin-right: 15px;
+}
+
+.navbar-top-links li a {
+    padding: 15px;
+    min-height: 50px;
+	cursor:pointer;
+}
+
+.navbar-top-links .dropdown-menu li {
+    display: block;
+}
+
+.navbar-top-links .dropdown-menu li:last-child {
+    margin-right: 0;
+}
+
+.navbar-top-links .dropdown-menu li a {
+    min-height: 0;
+    padding: 10px 22px;
+	border-bottom:1px solid #eeeeee; 
+	cursor:pointer;
+}
+
+.navbar-top-links .dropdown-menu li a div {
+    white-space: normal;
+}
+
+.navbar-top-links .dropdown-messages,
+.navbar-top-links .dropdown-tasks,
+.navbar-top-links .dropdown-alerts {
+    width: 310px;
+    min-width: 0;
+}
+
+.navbar-top-links .dropdown-messages {
+    margin-left: 5px;
+}
+
+.navbar-top-links .dropdown-tasks {
+    margin-left: -59px;
+}
+
+.navbar-top-links .dropdown-alerts {
+    margin-left: -123px;
+}
+
+.navbar-top-links .dropdown-user {
+    right: 0;
+    left: auto;
+}
+
+.toggleSideBar{
+background: none repeat scroll 0% 0% #e7e7e7;
+  width: 20px;
+  height: 36px;
+  color: #333;
+  margin-right: -20px;
+  margin-top: 5px;
+  border-radius:0 3px 3px 0;
+  padding-top: 8px;
+  padding-left: 4px;
+}
+.toggleSideBar:hover{
+background: none repeat scroll 0% 0% #eeeeee;
+}
+
+
+.sidebar .sidebar-nav.navbar-collapse {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.sidebar .sidebar-search {
+    padding: 15px;
+}
+
+.sidebar ul li {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.sidebar ul li a.active {
+    background-color: #eee;
+}
+
+.sidebar .arrow {
+    float: right;
+}
+
+.sidebar .fa.arrow:before {
+    content: "\f104";
+}
+
+.sidebar .active>a>.fa.arrow:before {
+    content: "\f107";
+}
+
+.sidebar .nav-second-level li,
+.sidebar .nav-third-level li {
+    border-bottom: 0!important;
+}
+
+.sidebar .nav-second-level li a {
+    padding-left: 20px;
+}
+
+.sidebar .nav-third-level li a {
+    padding-left: 52px;
+}
+
+@media(min-width:768px) {
+    .sidebar {
+        z-index: 1;
+        position: absolute;
+        width: 250px;
+        margin-top: 71px;
+    }
+
+    .navbar-top-links .dropdown-messages,
+    .navbar-top-links .dropdown-tasks,
+    .navbar-top-links .dropdown-alerts {
+        margin-left: auto;
+    }
+}
+
+.btn-outline {
+    color: inherit;
+    background-color: transparent;
+    transition: all .5s;
+}
+
+.btn-primary.btn-outline {
+    color: #428bca;
+}
+
+.btn-success.btn-outline {
+    color: #5cb85c;
+}
+
+.btn-info.btn-outline {
+    color: #5bc0de;
+}
+
+.btn-warning.btn-outline {
+    color: #f0ad4e;
+}
+
+.btn-danger.btn-outline {
+    color: #d9534f;
+}
+
+.btn-primary.btn-outline:hover,
+.btn-success.btn-outline:hover,
+.btn-info.btn-outline:hover,
+.btn-warning.btn-outline:hover,
+.btn-danger.btn-outline:hover {
+    color: #fff;
+}
+
+.chat {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.chat li {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #999;
+}
+
+.chat li.left .chat-body {
+    margin-left: 60px;
+}
+
+.chat li.right .chat-body {
+    margin-right: 60px;
+}
+
+.chat li .chat-body p {
+    margin: 0;
+}
+
+.panel .slidedown .glyphicon,
+.chat .glyphicon {
+    margin-right: 5px;
+}
+
+.chat-panel .panel-body {
+    height: 350px;
+    overflow-y: scroll;
+}
+
+.login-panel {
+    margin-top: 25%;
+}
+
+.flot-chart {
+    display: block;
+    height: 400px;
+}
+
+.flot-chart-content {
+    width: 100%;
+    height: 100%;
+}
+
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc_disabled {
+    background: 0 0;
+}
+
+table.dataTable thead .sorting_asc:after {
+    content: "\f0de";
+    float: right;
+    font-family: fontawesome;
+}
+
+table.dataTable thead .sorting_desc:after {
+    content: "\f0dd";
+    float: right;
+    font-family: fontawesome;
+}
+
+table.dataTable thead .sorting:after {
+    content: "\f0dc";
+    float: right;
+    font-family: fontawesome;
+    color: rgba(50,50,50,.5);
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.428571429;
+}
+
+.btn-circle.btn-lg {
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-size: 18px;
+    line-height: 1.33;
+}
+
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+.show-grid [class^=col-] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #ddd;
+    background-color: #eee!important;
+}
+
+.show-grid {
+    margin: 15px 0;
+}
+.navbar-top-links{
+	
+	margin-top:15px;
+}
+
+/* CSS for Organization selection and Date picker both are dependent on each other*/
+.dropdown{
+	background-color:#fff;
+	height:40px;
+	border: 1px solid #a5c756;
+	margin-left:10px;
+	margin-right:10px;
+	margin-bottom:5px;
+}
+.SelectOrganization{
+	margin-top: 2px;
+    width: 241px;
+    padding-left: 40px;
+    padding-top: 16px;
+}
+.OrganizationIcon{
+	height:40px;
+	width: 40px;
+	background: url('sprite1.png') no-repeat 0px 0px #a5c756;
+	margin-top: 2px;
+	position: absolute;
+	z-index: 1;
+	margin-left: 11px;
+}
+.SelectOrganizationTitle{
+	position: absolute;
+    z-index: 1;
+    font-size: 10px;
+    margin-top: 5px;
+    margin-left: 56px;
+}
+.SelectOrganization .SelectedOrganization{
+	position: relative;
+    font-size: 15px;
+}
+.SelectOrganization .OrganizationType{
+	position: relative;
+    font-size: 10px;
+    margin-top: -38px;
+}
+.SelectOrganization .fa-caret-down{
+	margin:0px 4px;
+}
+.OrganizationSelectionHeading{
+	background-color:#eee;
+    margin: 0x;
+    padding: 6px 21px;
+	font-size: 10px;
+}
+.dropdown .SelectDate{
+	padding-left: 42px;
+}
+.dropdown .SelectDate .DateIcon{
+	height:40px;
+	width: 40px;
+	background: url('sprite1.png') no-repeat 0px -45px #a5c756;
+	margin-left: -43px;
+	margin-top: -1px;
+}
+.FromDate{
+	position: relative;
+    font-size: 10px;
+    margin-top: -38px;
+}
+.DatePickerInputs{
+	position: relative;
+    font-size: 10px;
+    margin-top: -38px;
+	padding:0px;
+}
+.DatePickerInputs input {
+    border-style: none;
+    height: 19px;
+    position: relative;
+    top: 0px;
+    font-size: 15px;
+    margin-left: 2px;
+    width: 95px;
+}
+.DatePickerInputs .ToDate{
+	position: absolute;
+    top: -22px;
+	border-left: 1px solid #a5c756;
+	height: 39px;
+    padding-left: 3px;
+	padding-top:2px;
+}
+.TopSetButton{
+margin-top: -19px;
+height: 40px;
+border-radius: 0px;
+}
+/* END CSS for Organization selection and Date picker both are dependent on each other*/
+
+/* Heading and Subheading*/
+.page-header{
+	font-size:30px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+}
+.page-header-small{
+	font-size:15px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+}
+.topic-header{
+	font-size:20px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 100;
+	margin-top: 0px;
+	margin-bottom:22px;
+	margin-left: 20px;
+	color: #194b7d;
+}
+.SubHeading {
+    background-color: #f0fdab;
+    border: none;
+    color: #4e4e4e;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px 10px 10px 20px;
+    min-height: 40px;
+}
+.AdminMainActivity{
+background: none repeat scroll 0px 0px #EEE;
+border-bottom: 1px solid #DDD;
+padding: 10px 10px 0px 20px;
+}
+.addAdminForm{
+font-size: 12px;
+border-radius: 0px;
+background: none repeat scroll 0px 0px #EEE;
+border-bottom: 1px solid #DDD;
+border: medium none;
+color: #4E4E4E;
+margin-bottom: 20px;
+padding: 10px 10px 10px 20px;
+}
+.addAdminForm label {
+    font-weight: normal;
+    font-size: 12px;
+}
+.tab-content .SubHeading{
+	margin-top:0px;
+}
+.SubHeading .checkbox{
+	font-weight:normal;
+}
+.SubHeading .footerButtons{
+	margin-bottom:0px;
+	padding-top:5px;
+} 
+.SubHeading label{
+font-weight: normal;
+font-size:12px;
+}
+.SubHeading .input-sm {
+    margin-right: 10px;
+}
+.mandatoryField {
+    color: red;
+}
+.AdminDeleteButton {
+    border: 2px solid #FFF;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    height: 33px;
+    padding: 1px 1px 0px 0px;
+    width: 33px;
+    background: none repeat scroll 0% 0% #2C2C2C;
+}
+.AdminAddButton {
+    border: 2px solid #FFF;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    height: 33px;
+    padding: 0px;
+    width: 33px;
+}
+/* Action Links*/
+.Actiontitles{
+	padding-top: 10px;
+	margin:0px;
+	border-top:1px solid #ffc85a;
+	border-radius:none;
+}
+/* END Action Links*/
+/* END Heading and Subheading*/
+
+/*******************************Dashboard PAGE***************************************************/
+/* Dashboard Top Pannel*/
+	/* Repufactor*/
+	.dashboardNeutral{
+	background: url("sprite1.png") no-repeat scroll right 4px top -249px #ffc801;
+    height: 40px;
+    margin-bottom: 0;
+    margin-top: -10px;
+    padding-top: 10px;
+	border-bottom:1px solid #4b78b4;
+}
+	.dashboardNegative{
+	background: url("sprite1.png") no-repeat scroll right 4px top -342px #fe0000;
+    height: 40px;
+    margin-bottom: 0;
+    margin-top: -10px;
+    padding-top: 10px;
+	border-bottom:1px solid #4b78b4;
+}
+	.dashboardPositive {
+	background: url("sprite1.png") no-repeat scroll right 4px top -157px #018134;
+    height: 40px;
+    margin-bottom: 0;
+    margin-top: -10px;
+    padding-top: 10px;
+	border-bottom:1px solid #4b78b4;
+	}
+	.DashboardRepufactorPercentage{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size:60px;
+	color: #fff;
+	font-weight: lighter;
+	}
+	.DashboardAlerts{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size:60px;
+	color: #fff;
+	font-weight: lighter;
+	}
+	.DashboardRepufactorPercentage:hover{
+	color: #fafafa;
+	cursor:pointer;
+	}
+	.DashboardRepufactorChange{
+	margin-top:28px;
+	}
+	/* END Repufactor*/
+	/* ReiviewCount */
+	.ReiviewCountHeader{
+	font-size:18px;
+	font-weight:bold;
+	color:#fff;
+	cursor:pointer;
+	}
+	.ReiviewCountResult{
+	font-size:30px;
+	color:#fff;
+	margin-bottom: -15px;
+    margin-top: -10px;
+	cursor:pointer;
+	}
+	.ReviewCountGraph{
+		margin-bottom: -22px;
+		margin-top: -17px;
+	}
+	.ReviewCountGraph .text-right{
+		margin-top: 20px;
+	}
+	.ReiviewSentimentHeader{
+	font-size:18px;
+	font-weight:bold;
+	color:#194b7d;
+	}
+	.ReiviewSentimentCounts{
+	margin-left:-15px;
+	font-size:12px;
+	margin-top:40px;
+	cursor:pointer;
+	}
+	.ReiviewSentimentCounts .col-xs-12{
+	margin-bottom:7px;
+	}
+	/* END ReiviewCount */
+/* END Dashboard Top Pannel*/
+
+/* Dashboard Department and KPI Pannel*/
+.panel-default  .panel-body {
+  padding: 0px;
+  border: solid 1px #ececec;
+  margin-top: 2px;
+}
+.DashboardDepartmentRow{
+	border-bottom: 1px solid #ececec;
+    font-size: 15px;
+    padding: 13px 5px;  
+	cursor:pointer;
+	min-height: 52px;
+}
+.DashboardDepartmentFactor{
+	font-size:28px;
+	color:#19aae8;
+	float:right;
+	padding:0px;
+	margin-bottom: -15px;
+	margin-top: -5px;
+}
+.DashboardKPIReport{
+	padding-top:0px;
+	padding-bottom:0px;
+	border-bottom: 1px solid #ececec;
+    font-size: 15px;
+	cursor:pointer;
+}
+/* END span*/
+
+span.PositiveKPISentimentCount span{
+	height: 8px;
+	width:100%;
+    top: 4px;
+	background:#72d9be;
+	position:absolute;
+}
+span.NeutralKPISentimentCount span{
+	height: 8px;
+	width:100%;
+    margin-top: 21px;
+	background:#f4c947;
+	position:absolute;
+}
+span.NegativeKPISentimentCount span{
+	height: 8px;
+	width:100%;
+    margin-top: 37px;
+	background:#ef3f3f;
+	position:absolute;
+}
+span.NegativeKPISentimentCount, span.NeutralKPISentimentCount, span.PositiveKPISentimentCount{
+width:100%;
+}
+/* END Dashboard Department and KPI Pannel*/
+
+/* Dashboard Competitor */
+.DashboardCompetitorRank1{
+	background: url("RankingSprite.png") no-repeat scroll 5px 5px;
+}
+.DashboardCompetitorRank2{
+	background: url("RankingSprite.png") no-repeat scroll 5px -80px;
+}
+.DashboardCompetitorRank3{
+	background: url("RankingSprite.png") no-repeat scroll 5px -172px;
+}
+.DashboardCompetitorRank4{
+	background: url("RankingSprite.png") no-repeat scroll 5px -274px;
+}
+.DashboardCompetitorRank5{
+	background: url("RankingSprite.png") no-repeat scroll 5px -366px;
+}
+.DashboardCompetitorRank6{
+	background: url("RankingSprite.png") no-repeat scroll 5px -456px;
+}
+.DashboardCompetitorRank7{
+	background: url("RankingSprite.png") no-repeat scroll 5px -550px;
+}
+.DashboardCompetitorRank8{
+	background: url("RankingSprite.png") no-repeat scroll 5px -642px;
+}
+.DashboardCompetitorRank9{
+	background: url("RankingSprite.png") no-repeat scroll 5px -732px;
+}
+.DashboardCompetitorRank10{
+	background: url("RankingSprite.png") no-repeat scroll 5px -821px;
+}
+.DashboardCompetitor{
+	margin:10px 0px;
+	padding:10px 10px 10px 100px;
+	border-radius: 5px;
+	height:65px;
+	background-color: #ebebeb;
+	font-weight:bold;
+	font-size:16px;
+}
+.SelectedOrganizationRank{
+	background-color: #f0fdab;
+}
+.DashboardCompetitor > .SmallDarkGreyHeader{
+	margin-top:5px;
+}
+.DashboardCompetitor > .SmallDarkGreyHeader > span{
+	float:none;
+	margin-left:15px;
+}
+.DashboardCompetitorFactorScore{
+	/* background: url("repufactorLogo2.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); */
+    float: right;
+    font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-size: 24px;
+    margin-top: -43px;
+    padding-top: 5px;
+    width: 110px;
+}
+
+.trimTextLength{
+	width: 65%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: sans-serif;
+}
+/* END Dashboard Competitor */
+
+/* DashboardSorce*/
+	.DashboardTrageSorceCount{
+	margin:10px -5px;
+	padding:10px;
+	border-radius: 5px;
+	height:65px;
+	background-color: #ebebeb;
+	font-weight:bold;
+	font-size:11px;
+	color:#194b7d;
+	}
+	.DashboardTrageSorceCount > div{
+	font-weight:300;
+	font-size:24px;
+	color:#646464;
+	}
+	.DashboardSocialMentionCount{
+	margin:10px -5px;
+	padding:10px;
+	min-width:160px;
+	border-radius: 5px;
+	background-color: #fff;
+	font-weight:bold;
+	font-size:11px;
+	color:#646464;
+	}
+	.DashboardSocialMentionCount > img {
+	float:left;
+	}
+	.DashboardSocialMentionCount > div {
+	float:left;
+	margin-left:10px;
+	}
+	.DashboardSocialMentionCount > div > .CountNumber{
+	font-weight:300;
+	font-size:24px;
+	}
+/* END DashboardSorce*/
+
+/* Dashboard Notification Bar */
+.DashboardNotificationBar{
+	background: url("sprite1.png") no-repeat scroll 17px -123px #f0fdab;
+	border: none;
+	color: #4e4e4e;
+	border-radius: 5px;
+	padding: 10px 0 10px 50px;
+	font-weight: bold;
+	font-size:14px;
+	margin:5px;
+}
+.DashboadrNotificationTime{
+	font-weight: 200;
+	font-size:12px;
+	position:right;
+	padding-right:20px;
+}
+/* END Dashboard Notification Bar */
+/*******************************END Dashboard PAGE***************************************************/
+
+
+/*******************************Summary PAGE***************************************************/
+/* Overall Organization Scoreboard */
+.SummaryOverallOrganizationScoreboard{
+margin:0 auto;
+}
+
+.SummaryOverallOrganizationScoreboard .repufact{
+border-radius: 100px;
+height:200px;
+width:200px;
+}
+.SummaryOverallOrganizationScoreboard .Repufactlogo{
+margin:0 auto;
+padding-left: 15px;
+padding-top: 42px;
+
+}
+.SummaryRepufactorPercentage{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size:55px;
+	color: #fff;
+	font-weight: lighter;
+	text-align: center;
+	}
+.SummaryTotalReviews{
+	margin-top: 10px;
+}
+.SummaryTotalReviews .LargeBoldDarkBlueContent{
+	margin-top: -5px;
+}
+.SummaryTotalReferences{
+	margin-top: 10px;
+}
+.SummaryTotalSentimence{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.SummaryTotalSentimence .col-xs-7{
+	margin-left:-20px;
+	margin-top:10px;
+}
+.SummaryScoreForKPI {
+    height: 119px;
+    margin-left: -13px;
+    margin-right: 0;
+    padding-top: 10px;
+	border-radius: 5px;
+}
+.SummaryTargetChange {
+}
+.SummaryKPISource{
+	margin-top:0;
+}
+.SummaryKPISource .SummaryKPI{
+	margin-top: 25px;
+}
+.SummaryKPISource .SummarySources{
+	margin-top:25px;
+	margin-bottom:20px;
+}
+
+.SummarySources .topic-header{
+	margin-left: 20px;
+	margin-bottom:5px;
+}
+.SummarySources .LightGreyColor{
+padding:0px 3px 10px 3px;
+border-radius: 5px;
+margin:0px;
+}
+.SummarySources .LightGreyColor .SmallBoldGreyContent{
+margin:10px 0px 3px 0px;
+}
+/* END Overall Organization Scoreboard */
+/* Department Scoreboard */
+
+.SummaryDepartmentFactor .panel{
+border: solid 1px #cccccc;
+height:678px;
+}
+.SummaryDepartmentFactor > .panel > .panel-body > .row{
+margin-bottom:20px;
+}
+.SummaryDepartmentFactor .DepartmentfactorChangeLeft{
+margin-right:0px;
+}
+.SummaryDepartmentrepufact{
+border-radius: 100px;
+height:140px;
+width:140px;
+/* background: url("DepartmentfactorLogo2.png") no-repeat scroll 12px 43px rgba(0, 0, 0, 0); */
+}
+.Departmentfactorpercentage{
+	color: #646464;
+    font-size: 28px;
+    margin-top: 40px;
+    text-align: center;
+	}
+/* END Department Scoreboard */
+/*******************************END Summary PAGE***************************************************/
+
+/*******************************Trade Review PAGE***************************************************/
+.ReviewFilterOutput{
+	font-size: 11px;
+	margin-right:3px;
+}
+.ReviewFilterOutput .btn{
+	font-size: 9px;
+	margin-left:1px;
+	padding:0px;
+	height:16px;
+	width:16px;
+	border-radius:15px;
+	font-weight:bold;
+	color: #ffffff;
+	background: #c7c356;
+}
+.ShowSemanticPolarity{
+margin-bottom:5px;
+}
+.ShowSemanticPolarity:hover{
+	cursor: pointer;
+	background-color: #668abd; 
+}
+.ReviewFilterOutput .btn:hover{
+	background: #aaa749;
+}
+.filterButton{
+	float:right;
+}
+/**Filter Lightbox**/
+.FilterLightBox .modal-header{
+	background-color: #f0fdab;
+}
+.FilterLightBox .modal-body{
+	margin:0px;
+	padding:0px;
+}
+.FirstRowFilterOptions{
+	margin-bottom:20px;
+}
+.OtherFilterOptions{
+	background-color: #ebebeb;
+	height:500px;
+}
+.SaveFilterOptions{
+	background-color: #dddcdc;
+	height:500px;
+}
+.SaveFilterOptions .BtnDone{
+	margin-top:20px;
+}
+.FilterLightBox .modal-body h4{
+	color:#646464;
+	font-size: 14px;
+	margin-bottom:5px;
+	margin-top: 20px;
+}
+.FilterLightBox .modal-body label{
+	color:#646464;
+	font-size: 12px;
+	margin-bottom:0px;
+	font-weight: normal;
+}
+.FilterLightBox .modal-body select.input-sm {
+    height: 26px;
+    line-height: 26px;
+	margin-top: 3px;
+}
+.FilterLightBox .modal-body .OtherFilterOptions .OtherFilterFilterOptionGroup{
+	margin-top:10px;
+}
+/**END Filter Lightbox**/
+/**Respond To Reviews Lightbox**/
+.RespondToReviews .modal-header{
+	background-color: #f0fdab;
+}
+/**END Respond To Reviews Lightbox**/
+/**ActionReports**/
+.ActionReports{
+	border-bottom:1px solid #fff;
+	border-radius:none;
+	margin-bottom: 10px;
+}
+.ActionReports .revieweTime{
+	color: #969696;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+/**END ActionReports**/
+.SearchIcon{
+background:#ececec;
+border-radius:none;
+border:none;
+}
+.SearchIcon{
+background:#ececec;
+border:none;
+}
+.SearchIcon .input-group-addon{
+background: #d9533d;
+border:none;
+color:#fff;
+}
+/**Single Reviews**/
+.SingleReviewList{
+padding-bottom:20px;
+margin-bottom:20px;
+}
+.SingleReviewHeader{
+font-size:18px;
+font-weight:bold;
+margin-top:10px;
+margin-right: 60px;
+text-overflow: ellipsis; 
+}
+.SingleReviewBody{
+font-size:14px;
+color:#333333;
+}
+/*Positive Trade Reviews*/
+.BlueSentimentReview{
+background: #72d9be;
+font-size:14px;
+color:#ffffff;
+padding-left:10px;
+padding-right:35px;
+padding-top:10px;
+min-height:40px;
+background: #4b78b4;
+font-weight:bold;
+}
+.BlueSentimentReview .arrow-left {
+	border-bottom: 10px solid transparent;
+    border-left: 9px solid #4b78b4;
+    border-top: 10px solid transparent;
+}
+/*END Positive Trade Reviews*/
+
+/*Positive Trade Reviews*/
+.PositiveSentimentReview{
+background: #72d9be;
+font-size:12px;
+color:#ffffff;
+padding-left:5px;
+padding-right:35px;
+padding-top:10px;
+min-height:40px;
+background: url("sprite1.png") no-repeat scroll right -9px top -158px #72d9be;
+border-bottom: 1px solid #4b78b4;
+}
+.PositiveSentimentReview .score{
+
+font-size:14px;
+color:#ffffff;
+font-weight:bold;
+}
+
+.positivePadding{
+	margin-left: 18px;
+}
+
+.PositiveSentimentReview .arrow-left {
+	border-bottom: 10px solid transparent;
+    border-left: 9px solid #72d9be;
+    border-top: 10px solid transparent;
+}
+/*END Positive Trade Reviews*/
+/*Negative Trade Reviews*/
+.NegativeSentimentReview{
+background: #ef3f3f;
+font-size:12px;
+color:#ffffff;
+padding-left:5px;
+padding-right:35px;
+padding-top:10px;
+min-height:40px;
+background: url("sprite1.png") no-repeat scroll right -9px top -343px #ef3f3f;
+border-bottom: 1px solid #4b78b4;
+}
+.NegativeSentimentReview .score{
+
+font-size:14px;
+color:#ffffff;
+font-weight:bold;
+}
+
+.negativePadding{
+	margin-left: 21px;
+}
+
+.NegativeSentimentReview .arrow-left {
+	border-bottom: 10px solid transparent;
+    border-left: 9px solid #ef3f3f;
+    border-top: 10px solid transparent;
+}/*END Negative Trade Reviews*/
+/*Neutral Trade Reviews*/
+.NeutralSentimentReview{
+background: #f4c947;
+font-size:12px;
+color:#ffffff;
+padding-left:5px;
+padding-right:35px;
+padding-top:10px;
+min-height:40px;
+background: url("sprite1.png") no-repeat scroll right -9px top -251px #f4c947;
+border-bottom: 1px solid #4b78b4;
+}
+.NeutralSentimentReview .score{
+font-size:14px;
+color:#ffffff;
+font-weight:bold;
+
+}
+
+.neutralPadding{
+	margin-left: 21px;
+}
+
+.NeutralSentimentReview .arrow-left {
+	border-bottom: 10px solid transparent;
+    border-left: 9px solid #f4c947;
+    border-top: 10px solid transparent;
+}/*END Neutral Trade Reviews*/
+.SingleReviewList .arrow-left {
+    float: right;
+    height: 0;
+    margin-right: -42px;
+    margin-top: 0;
+    position: relative;
+    width: 0;
+}
+@media(max-width:768px) {/*design change for mobile*/
+	.arrow-left {
+		display:none;
+		}	
+}
+
+.reviewDetails{
+	color: #ffffff;
+	padding-left:8px;
+	padding-right:3px;
+	font-size:14px;
+}
+.reviewDetails .reviewSource{
+	font-size:14px;
+	font-weight:bold;
+}
+.reviewDetails .reviewerName{
+	font-size:12px;
+	margin-top: 5px;
+}
+.reviewDetails .reviewerName span{
+	font-weight:bold;
+}
+.reviewDetails .reviewerDetail{
+	font-size:12px;
+	margin-top: 20px;
+}
+.reviewDetails .reviewerDetail span{
+	font-weight:bold;
+}
+.reviewDetails .revieweTime{
+	font-size:11px;
+	color: #c8c8c8;
+	font-weight: medium;
+	margin-bottom:10px;
+}
+.revieweTime{
+	font-weight: medium;
+	color: #969696;
+    font-size: 11px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-family: Meiryo, Meiryo, HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+}
+/*For Making Stars*/
+span.stars, span.stars span {
+    display: block;
+    background: url(stars.png) 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+span.stars span {
+    background-position: 0 0;
+}
+.SourceRating span{
+	 float:left;
+	 padding-right:5px;
+	 color:#646464;
+	 font-size:13px;
+}
+.SourceRating{
+	 margin-bottom:5px;
+}
+/*END For Making Stars*/
+
+.SourceKPIRating{
+	background: #d7d7d7;
+	margin:10px;
+	margin-bottom:0px;
+}
+.SourceKPIRating .KPIRating{
+	font-size:13px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.OnReviewActions .panel-body{
+	margin-top:0px;
+	padding-top:0px;
+}
+.TradeReviewKpiDepartmentFactor{
+	background: #ececec;
+	margin:10px;
+	margin-bottom:0px;
+	display:none;
+}
+.TradeReviewKpiDepartmentFactor .KPIScore{
+	font-size:13px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.TradeReviewKpiDepartmentFactor .KPIScoreHeader{
+	font-size:13px;
+	margin-top:10px;
+	margin-bottom:-5px;
+}
+/*btn-ViewReviewDetails*/
+.btn-ViewReviewDetails{
+background:url("sprite1.png") no-repeat scroll right -18px top -504px #a5c756;
+border-radius:20px;
+height:24px;
+width:24px;
+padding:0px;
+color:#ffffff;
+margin-top:5px;
+}
+.btn-ViewReviewDetails:hover, .btn-ViewReviewDetails:active, .btn-ViewReviewDetails:focus{
+background:url("sprite1.png") no-repeat scroll right -18px top -531px #a5c756;
+}/*END btn-ViewReviewDetails*/
+/*Flag*/
+.btn-flag{
+background:url("sprite1.png") no-repeat scroll right -19px top -438px #a5c756;
+border-radius:20px;
+height:24px;
+width:24px;
+padding:0px;
+color:#ffffff;
+margin-top:5px;
+}
+.btn-flag:hover, .btn-flag:active, .btn-flag:focus{
+background:url("sprite1.png") no-repeat scroll right -19px top -473px #a5c756;
+}
+.flagedReview{
+background:url("sprite1.png") no-repeat scroll right -19px top -473px #a5c756;
+}
+.flagOptions{
+background:#f0fdab;
+float:left;
+position:absolute;
+margin-top:30px;
+z-index:2;
+width:217px;
+margin-left:-178px;
+padding:0px 7px 0px 10px;
+font-size:13px;
+border-radius:4px;
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+display:none;
+}
+.Review-page-arrow-up{/*Up arrow for review page*/
+	border-bottom: 10px solid #f0fdab;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    float: right;
+    height: 0;
+    margin-right: 6px;
+    margin-top: -19px;
+    width: 0;
+}
+.flagOptions .btn{
+margin-top:8px;
+}
+.flagOptions  .SmallNormalLightGreyContent{
+margin-bottom:5px;
+}
+.OnSeleceActive{
+display:block;
+}
+.SavedFilter .btn-green{
+height:15px;
+width:15px;
+font-size: 8px;
+font-weight: bold;
+margin-right:5px;
+}
+
+/*Flag*/
+/**END Single Reviews**/
+/*******************************END Trade Review PAGE***************************************************/
+
+/*******************************Milestone***************************************************/
+.manageMilestone .panel .panel-collapse .panel-body{
+	border:1px solid #ececec;
+	margin-top:3px;
+}
+.MilestoneValues .col-sm-2,.MilestoneValues .col-sm-3, .MilestoneValues .col-sm-1{
+margin-top:10px;
+}
+.editMilestoneButton{
+float:right;
+margin-top:10px;
+}
+.searchMilestone{
+height: 25px;
+width: 140px;
+}
+.manageMilestone a{
+color:#4b78b4;
+}
+.addMilestone label{
+font-size:11px;
+}
+.MilestoneBlue{
+	background: none repeat scroll 0 0 #4b78b4;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 6px 0 0 0;
+    padding: 3px;
+    text-align: center;
+    width: 112px;
+}
+.MilestoneHistory .MilestoneBlue{
+	margin-top: -4px;
+}
+.yourRepufactor{
+	background: none repeat scroll 0 0 #f0fdab;
+}
+.btn-blue{
+	background: none repeat scroll 0 0 #4b78b4;
+    color: #fff;
+}
+.btn-blue:focus, .btn-blue:hover, .btn-blue:active{
+	background: none repeat scroll 0 0 #3d6ba8;
+	color: #fff;
+}
+.ActualScoreForMilestone{
+	/* background: url("repufactorLogo2.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); */
+    font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 4px;
+    /* padding-top: 11px; */
+    width: 135px;
+}
+.MilestoneHistory .ActualScoreForMilestone{
+	margin-top: 0px;
+}
+.ActualScoreForAddMilestone{
+	/* background: url("repufactorLogo2.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); */
+    font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 4px;
+	margin-bottom: 4px;
+    padding-top: 11px;
+    width: 100%;
+}
+.MilestoneHistory .panel-heading{
+	height:30px;
+	padding-top:5px;
+}
+.MilestoneHistory .panel-heading .panel-title a{
+	font-size:12px;
+	color:#4b78b4;
+}
+.MilestoneHistoryMonthTimer > .panel-heading{
+	height:40px;
+	font-size:14px;
+	font-weight:bold;
+	background-color:#b4b4b4;
+	color:#4e4e4e;
+}
+/*******************************END Milestone***************************************************/
+
+
+/*******************************KPI Department Factor***************************************************/
+.KPIDepartmentFactorTop .col-xs-12{
+margin-top:10px;
+}
+.KPIDepartmentFactorTable{
+margin-top:30px;
+margin-bottom:10px;
+}
+.KPIDepartmentFactorTable .panel-heading{
+font-size:14px;
+color:#4e4e4e;
+background:#b4b4b4;
+padding:7px 32px;
+}
+.KPIDepartmentFactorTable .panel-body{
+padding:5px 32px;
+}
+.KPIDepartmentFactorTable .KPIDepartmentFactorTableTopics{
+font-size:12px;
+color:#4e4e4e;
+background:#ececec;
+}
+.KPIDepartmentFactorTableBody .col-xs-12{
+margin-top:10px;
+}
+.KPIDepartmentFactorTableBody .col-xs-12 .col-xs-4{
+margin-top:-5px;
+}
+.KPIDepartmentFactorTableBody:hover{
+cursor: pointer;
+background-color:#fcfcfc;
+}
+.KeywordSelection .departmentAccord{
+font-size: 14px;
+font-weight:bold;
+}
+.KeywordSelection .panel-body{
+	border: 1px solid #ececec;
+    margin-top: 2px;
+}
+.KeywordSelection .panel-heading{
+	padding:5px;
+}
+.KeywordSelection .panel-body{
+	padding:5px;
+}
+.KeywordSelection .panel-body .col-xs-12{
+	margin-top:10px;
+}
+.KeywordSelection .panel-body .col-xs-12 .col-xs-4{
+margin-top:-5px;
+}
+.KeywordSelection .panel-body .col-xs-12 .keywordbox{
+	float:left;
+	border: 1px solid #ececec;
+    margin-top: 5px;
+	padding-top:5px;
+	padding-bottom:5px;
+	
+}
+
+.keywordbox{
+display:none;
+}
+/*******************************END KPI Department Factor***********************************************/
+
+
+/************************************Source Factor**************************************************/
+.SourceFactorScore{
+	font-size:22px;
+	color:#19aae8;
+	padding:0px;
+	margin-bottom: -15px;
+	margin-top: 0px;
+}
+.sourceSmallLineGraph{
+	padding-top: 15px;
+	padding-bottom:40px;
+}
+.SourceMilestoneDate{
+	margin-top:0px;
+	margin-bottom:10px;
+}
+.SourceCalcualtionChart{
+	margin-bottom:10px;
+}
+.sentimentKeywordResult{
+padding:5px;
+margin-bottom:10px;
+}
+.TopReviewSource{
+margin-bottom:10px;
+}
+.SourceInnerPageReview{
+margin-bottom:20px;
+}
+/*******************************END Source Factor***************************************************/
+
+/*******************************Public Reviews***************************************************/
+.public-page-wrapper{
+max-width:980px;
+background:#fff;
+margin:0 auto;
+padding-left:30px;
+box-shadow: 0px 1px 2px #888888;
+}
+.company-banner-header{
+margin-left:-15px;
+border-bottom:1px solid #f8f8f8;
+} 
+.public-page-sub-header{
+background:#748fb4;
+width:980px;
+height:60px;
+margin-left:-15px;
+margin-bottom: 30px;
+}
+.public-repufact-logo{
+background:#fff;
+margin-left: 40px;
+padding:5px 5px 0px 5px;
+width: 200px;
+}
+.public-page-footer{
+max-width:980px;
+margin:20px auto 10px;
+padding-left:30px;
+}
+.public-page-company-footer{
+margin-left: 73px;
+}
+/*******************************END Public Reviews***********************************************/
+
+
+
+
+/******************************* Notification Landing Pages ***********************************************/
+ .notificationLandingPanel > .panel-body{
+height: 40px;
+padding: 8px;
+ }
+/******************************* END Notification Landing Pages ***********************************************/
+  
+  
+/******************************* Comparative Analysis ***********************************************/
+.comparativeAnalysisLandingPanel{
+
+}
+.comparativeAnalysisLandingPanel > .panel-heading{
+background-color: #b4b4b4;
+}
+.comparativeAnalysisLandingPanel > .panel-heading > .panel-title{
+font-family: Meiryo, Meiryo, HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+font-size: 16px;
+font-weight: bold;
+}
+.comparativeAnalysisLandingPanel > .panel-heading > .panel-title > a{
+font-family: Meiryo, Meiryo, HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+font-size: 12px;
+font-weight: bold;
+}
+#DepartmentComparativeAnalysis > .panel-body, 
+#KpiComparativeAnalysis > .panel-body, 
+#SourceComparativeAnalysis > .panel-body,  
+#LanguageComparativeAnalysis > .panel-body{
+border:none;
+}
+#DepartmentComparativeAnalysis > .panel-body > .panel-heading, 
+#KpiComparativeAnalysis > .panel-body > .panel-heading, 
+#SourceComparativeAnalysis > .panel-body > .panel-heading, 
+#LanguageComparativeAnalysis > .panel-body > .panel-heading{
+padding: 0px;
+}
+#departmentComparativeAnalysisForm > table > thead > tr > th, 
+#kpiComparativeAnalysisForm > table > thead > tr > th, 
+#sourceComparativeAnalysisForm > table > thead > tr > th, 
+#languageComparativeAnalysisForm > table > thead > tr > th{
+background: #ececec;
+font-family: Meiryo, Meiryo, HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+font-size: 12px;
+font-weight: 300;
+}
+#departmentComparativeAnalysisForm > table > tbody > tr > td, 
+#kpiComparativeAnalysisForm > table > tbody > tr > td, 
+#sourceComparativeAnalysisForm > table > tbody > tr > td, 
+#languageComparativeAnalysisForm > table > tbody > tr > td{
+border:1px solid #ececec;
+}
+/******************************* Comparative Analysis ***********************************************/
+
+
+
+
+
+
+/************************************ Universal Elements*******************************************************/
+.cursorPointer{
+cursor: pointer;
+}
+.modal-header{
+	background-color: #f0fdab;
+}
+.chartPreviousBtn{
+	position:absolute; 
+	z-index:10; 
+	margin-top:170px; 
+	margin-left:-12px;
+	height:30px;
+	width:20px;
+	background: url("chartPreviousBtn.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+	border:none;
+}
+.chartPreviousBtn:hover{
+	background: url("chartPreviousBtnHover.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+}
+.chartPreviousBtn:disabled{
+	background: url("chartPreviousBtnDisabled.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+}
+.chartNextBtn{
+	right:0px;
+	margin-right: -2px;
+	margin-top: -230px;
+	position: absolute;
+	z-index: 10; 
+	height:30px;
+	width:20px;
+	background: url("chartNextBtn.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+	border:none;
+}
+.chartNextBtn:hover{
+	background: url("chartNextBtnHover.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+}
+.chartNextBtn:disabled{
+	background: url("chartNextBtnDisabled.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+}
+.pagination .disabled a{/*Selected Page and enable*/
+background:#eee;
+}
+.pagination .disabled a:hover{/*Selected Page and enable*/
+background:#eee;
+}
+/*Icons*/
+.ShareReviewIcon{
+margin-left: 0;
+padding-left: 7px;
+background: url("ShareReviewGrey.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+}
+a .ShareReviewIcon{
+padding-left: 20px;
+background: url("ShareReview.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+}
+a:hover .ShareReviewIcon, a:active .ShareReviewIcon, a:focus .ShareReviewIcon{
+padding-left: 20px;
+background: url("ShareReviewActive.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+}
+
+.ReviewNoteIcon{
+margin-left: 0;
+padding-left: 7px;
+padding-left: 20px;
+background: url("ReviewNoteGrey.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+}
+a .ReviewNoteIcon{
+padding-left: 20px;
+background: url("ReviewNote.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+}
+a:hover .ReviewNoteIcon, a:active .ReviewNoteIcon, a:focus .ReviewNoteIcon{
+padding-left: 20px;
+background: url("ReviewNoteActive.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+}
+
+.ReviewActionIcon{
+margin-left: 0;
+padding-left: 7px;
+padding-left: 20px;
+background: url("ReviewActionGrey.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+}
+a .ReviewActionIcon{
+padding-left: 20px;
+background: url("ReviewAction.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+}
+a:hover .ReviewActionIcon, a:active .ReviewActionIcon, a:focus .ReviewActionIcon{
+padding-left: 20px;
+background: url("ReviewActionActive.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+}
+.BroadcastIcon{
+background: url("BroadcastGrey.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+margin-bottom: -8px;
+padding-left: 28px;
+height: 25px;
+}
+a .BroadcastIcon{
+background: url("Broadcast.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+margin-bottom: -8px;
+padding-left: 28px;
+height: 25px;
+}
+a:hover .BroadcastIcon, a:active .BroadcastIcon, a:focus .BroadcastIcon{
+background: url("BroadcastActive.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+margin-bottom: -8px;
+padding-left: 28px;
+height: 25px;
+}
+
+.ReplyToReview{
+background: url("ReplyToReviewGrey.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+margin-bottom: -8px;
+padding-left: 28px;
+height: 25px;
+}
+a .ReplyToReview{
+background: url("ReplyToReview.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+margin-bottom: -8px;
+padding-left: 28px;
+height: 30px !important;
+}
+a:hover .ReplyToReview, a:active .ReplyToReview, a:focus .ReplyToReview{
+background: url("ReplyToReviewActive.png") no-repeat 0 0 rgba(0, 0, 0, 0);
+margin-bottom: -8px;
+padding-left: 28px;
+height: 25px;
+}
+/*END Icons*/
+.error-on-form{
+	font-size:10px;
+	color:#ff0000;
+	margin-top:3px;
+	margin-bottom:3px;
+}
+.success-on-form{
+	font-size:10px;
+	color:#0f883d;
+	margin-top:3px;
+	margin-bottom:3px;
+}
+.btn-green{
+background: #a5c756;
+color:#ffffff;
+}
+.btn-green:hover,.btn-green:focus,.btn-green:active{
+background: #8db239;
+color:#ffffff;
+}
+.center_align {
+margin:0 auto;
+text-align: center;
+}
+.float-right{
+float:right;
+margin-left:5px;
+}
+.float-left{
+float:left;
+margin-right:5px;
+}
+.marginRight20{
+margin-right:20px;
+}
+.marginRight5{
+margin-right:5px;
+}
+.lineShadawSeperation{
+margin:30px 0px 40px 0px;
+border-bottom:1px solid #333;
+padding:0px;
+}
+.VerySmallGreyContent{
+	color: #646464;
+    font-family: Meiryo,"Meiryo","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+.DarkBlue{
+	background-color: #194b7d;
+}
+.LightBlue{
+	background-color: #6084b4;
+}
+.LightGreyColor{
+	background-color: #ececec;
+}
+.DarkRed{
+	background-color: #ef3f3f;
+}
+.DarkYellow{
+	background-color: #f4c947;
+}
+.LightGreen{
+	background-color: #018134;
+}
+.SmallWhiteHeader{
+	font-size:11px;
+	color: #fff;
+	margin-right:0px;
+}
+.SmallDarkGreyHeader{
+	font-size:11px;
+	margin-right:0px;
+}
+.TineyGreyContent{
+	font-size:9px;
+}
+.SmallRedHeader{
+	font-size:11px;
+	margin-right:0px;
+	color:#db0703;
+}
+.SmallHappyCountIcon{
+	background: url("SmallHappyIcon.png") no-repeat scroll 0 5px rgba(0, 0, 0, 0);
+    padding-left: 24px;
+}
+.SmallNormalCountIcon{
+	background: url("SmallNormalIcon.png") no-repeat scroll 0 5px rgba(0, 0, 0, 0);
+    padding-left: 24px;
+}
+.SmallSadCountIcon{
+	background: url("SmallSadIcon.png") no-repeat scroll 0 5px rgba(0, 0, 0, 0);
+    padding-left: 24px;
+}
+.HappyCountIcon{
+	background: url("HappyIcon.png") no-repeat scroll 0 4px rgba(0, 0, 0, 0);
+    padding-left: 28px;
+}
+.NormalCountIcon{
+	background: url("NormalIcon.png") no-repeat scroll 0 4px rgba(0, 0, 0, 0);
+    padding-left: 28px;
+}
+.SadCountIcon{
+	background: url("SadIcon.png") no-repeat scroll 0 4px rgba(0, 0, 0, 0);
+    padding-left: 28px;
+}
+.PositiveUnderline{
+	background: #72d9be;
+}
+.NegativeUnderline{
+	background: #ef3f3f;
+}
+.NeutralUnderline{
+	background: #ffc85a;
+}
+.PositiveChange{
+	background: url("sprite1.png") no-repeat scroll right -26px top -84px #72d9be;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 11px;
+    padding: 3px 17px 3px 3px;
+	margin-right:12px;
+	float:right;
+}
+.PositiveChangeLeftAlign{
+	background: url("sprite1.png") no-repeat scroll right -26px top -84px #72d9be;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 11px;
+    padding: 3px 17px 3px 3px;
+	float:left;
+}
+.NegativeChange{
+	background: url("sprite1.png") no-repeat scroll right -26px top -104px #ef3f3f;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 11px;
+    padding: 3px 17px 3px 3px;
+	margin-right:12px;
+	float:right;
+}
+.NegativeChangeLeftAlign{
+	background: url("sprite1.png") no-repeat scroll right -26px top -104px #ef3f3f;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 11px;
+    padding: 3px 17px 3px 3px;
+	float:left;
+}
+.NoChange{
+	background: #98a4b4;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 11px;
+    padding: 3px;
+	margin-right:12px;
+	float:right;
+}
+.NoChangeLeftAlign{
+	background: #98a4b4;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 11px;
+    padding: 3px;
+	float:left;
+}
+.PositiveSentimentCount{
+color: #72d9be;
+font-weight: bold;
+font-size:12px;
+}
+
+.NeutralSentimentCount{
+color: #f4c947;
+font-weight: bold;
+font-size:12px;
+}
+.NegativeSentimentCount{
+color: #ef3f3f;
+font-weight: bold;
+font-size:12px;
+}
+/* Tsxt Colors And Sizes*/
+.hilighted{
+font-weight:bold;
+color:#6666CC;
+}
+.SmallNormalLightGreyContent{
+font-size: 13px;
+color: #969696;
+}
+.SmallBoldGreyContent{
+font-weight: bold;
+font-size: 12px;
+}
+.VerySmallBoldGreyContent{
+font-weight: bold;
+font-size: 11px;
+}
+.MediumBoldGreyContent{
+font-weight: bold;
+font-size: 15px;
+}
+.MediumNormalGreyContent{
+font-weight: normal;
+font-size: 15px;
+}
+.LargeMediumBoldGreyContent{
+font-weight: bold;
+font-size: 20px;
+}
+.LargeBoldDarkBlueContent{
+font-weight: bold;
+font-size: 24px;
+color: #194b7d;
+}
+.LargeLightDarkBlueContent{
+font-weight: light;
+font-size: 24px;
+color: #194b7d;
+}
+.MediumBoldDarkBlueContent{
+font-weight: bold;
+font-size: 15px;
+color: #194b7d;
+}
+.MediumLightDarkBlueContent{
+font-weight: light;
+font-size: 15px;
+color: #194b7d;
+}
+.SmallLightDarkBlueContentLink{
+font-weight: light;
+font-size: 12px;
+color: #194b7d;
+text-decoration: underline;
+}
+
+.SmallLightDarkBlueContentLink:hover{
+color: #003f7d;
+}
+.btn{/* Keeping gap for buttons*/
+margin-right: 5px;
+}
+.OnSeleceActive{/* Visibality of actions*/
+display:block;
+}
+.chartBox{
+padding:5px 10px;
+margin-top:20px;
+border: 1px solid #f8f8f8;
+}
+.highcharts-button{/* High Charts editing*/
+display:none;
+}
+
+#SentimentCount  .highcharts-grid path:nth-child(1), #SentimentCount  .highcharts-grid path:nth-child(2){/* Remove Grid from sentiment count*/
+display:none;
+}
+#reviewCount .highcharts-grid path:nth-child(1){
+display:none;
+}
+#ReviewCount  .highcharts-grid path:nth-child(1), #ReviewCount  .highcharts-grid path:nth-child(2){/* Remove Grid from #ReviewCount count*/
+display:none;
+}
+.KPISentimentCount .highcharts-container svg .highcharts-grid path{
+display:none;
+}
+.KPISentimentCount .highcharts-container svg .highcharts-axis path{
+display:none;
+}
+.KPISentimentCount .highcharts-container svg .highcharts-series-group rect:nth-child(1){
+display:none;
+}
+.KPISentimentCount .highcharts-container svg .highcharts-series-group rect:nth-child(2){
+ fill:#72d9be;
+}
+.KPISentimentCount .highcharts-container svg .highcharts-series-group rect:nth-child(3){
+ fill:#f4c947;
+}
+.KPISentimentCount .highcharts-container svg .highcharts-series-group rect:nth-child(4){
+ fill:#ef3f3f;
+}
+.KPISentimentCount{
+margin-left:10px;
+}
+.DashboardKPIReport .row  .col-lg-4{
+margin-top:10px;
+}
+.DashboardKPIReport .row  .col-lg-8 .row .text-right{
+font-size: 11px;
+padding-top: 1px;
+}
+
+#KPITEST .highcharts-container svg .highcharts-grid path, #KPITEST .highcharts-container svg .highcharts-axis path{
+stroke:#eee;
+}
+
+.nav-second-level{
+font-size:12px;
+}
+
+#SocialSourceLanding .highcharts-series rect:nth-child(1), #SocialSourceLanding .highcharts-series rect:nth-child(6){
+ fill:#28a971;
+}
+
+#SocialSourceLanding .highcharts-series rect:nth-child(2), #SocialSourceLanding .highcharts-series rect:nth-child(7){
+ fill:#007269;
+}
+#SocialSourceLanding .highcharts-series rect:nth-child(3), #SocialSourceLanding .highcharts-series rect:nth-child(8){
+ fill:#0f87a9;
+}
+
+#SocialSourceLanding .highcharts-series rect:nth-child(4), #SocialSourceLanding .highcharts-series rect:nth-child(9){
+ fill:#0ea950;
+}
+
+#SocialSourceLanding .highcharts-series rect:nth-child(4), #SocialSourceLanding .highcharts-series rect:nth-child(10){
+ fill:#135da9;
+}
+.highcharts-legend  rect:nth-child(4){
+fill: rgba(255, 255, 255, 0.5);
+}
+/* END Tsxt Colors And Sizes*/
+/****************** END Universal Elements********************/
+
+
+/*******************************error page***************************************************/
+#error-page-wrapper {
+    min-height: 568px;
+	width:100%;
+    background-color: #fff;
+	margin:0 auto;
+	text-align: center;
+}
+
+.imageErrordiv{
+	padding-top:100px;
+}
+.YellowStrip404{
+width:100%;
+border-bottom:10px solid #e2aa00;
+background-color:#f4c947;
+margin:0 auto;
+text-align: center;
+}
+.YellowStrip404 div{
+color:#fff;
+font-size:18px;
+padding-top: 15px;
+padding-bottom: 15px;
+}
+
+.YellowText404{
+color: #e2aa00;
+text-align: center;
+font-size:14px;
+margin-top:5px;
+}
+
+.RedStrip403{
+width:100%;
+border-bottom:10px solid #c31700;
+background-color:#d9533d;
+margin:0 auto;
+text-align: center;
+}
+.RedStrip403 div{
+color:#fff;
+font-size:18px;
+padding-top: 15px;
+padding-bottom: 15px;
+}
+
+.RedText404{
+color: #c31700;
+text-align: center;
+font-size:14px;
+margin-top:5px;
+}
+/*******************************End error page***************************************************/
+
+/*******************************Data Table CSS Changes ***************************************************/
+.dataTables_filter{
+text-align: right;
+font-size:11px;
+}
+.dataTables_filter input{
+width:200px;
+}
+.dataTables_length{
+font-size:11px;
+
+}
+.dataTables_length > label > select{
+font-size:11px;
+}
+.dataTables_paginate{
+text-align: right;
+}
+.pagination{
+margin:0px;
+font-size:11px;
+color:#a5c756;
+}
+.pagination .paginate_button{
+color:#a5c756;
+}
+/*******************************END Data Table CSS Changes ***************************************************/
+
+
+/*******************************QC Pages ***************************************************/
+.PendingReviews{
+	background: #F00;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 11px;
+    padding: 3px;
+	float:left;
+}
+.NewReviews{
+	background: #72D9BE;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 11px;
+    padding: 3px;
+	float:left;
+}
+.ApprovedReviews{
+	background: #4B78B4;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 11px;
+    padding: 3px;
+	float:left;
+}
+.DeletedReviews{
+	background: #98a4b4;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 11px;
+    padding: 3px;
+	float:left;
+}
+.qcSupHeader{
+padding-bottom:5px;
+margin-bottom:20px;
+border-bottom:1px solid #ccc;
+}
+
+.QCMappingResults{
+background: #f0f0f0;
+border-bottom:2px solid #fff;
+margin-bottom: -10px;
+}
+
+.QCUpdate{
+background: none repeat scroll 0% 0% #F0F0F0;
+border-bottom: 2px solid #FFF;
+padding-top: 10px;
+padding-bottom: 10px;
+margin-top: -7px;
+}
+
+.QCMappingID{
+margin: 10px;
+}
+
+.row .QCMappingStyle ul li .dropdown-toggle{
+color: #66C;
+padding:3px;
+}
+.row .QCMappingStyle ul li .disabled{
+color: #555;
+}
+.row .QCMappingStyle ul .dropdown{
+height:auto;
+background: none;
+border: none;
+}
+.row .QCMappingStyle{
+background: none repeat scroll 0% 0% #F0F0F0;	
+}
+
+.QCMappingResults div ul .dropdown .QC-page-arrow-up{
+	border-bottom: 10px solid #c9c9c9;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    float: right;
+    height: 0;
+    width: 0;
+	float: left;
+	margin-left: 10px;
+	margin-top: -16px;
+}
+
+.QCmappingArrow{
+top: 4px;
+}
+
+.QCmappingKeywords{
+margin:10px}
+
+.QCmappingPolarity{
+margin-left:10px;
+margin-top:15px;
+margin-bottom:50px;
+}
+
+.QCmappingPolarity select{
+margin-top:-5px;
+margin-right:50px;
+}
+
+.QCMappingResults .QCMappingStyle ul li  .QCflagged{
+background: url("sprite1.png") no-repeat scroll right -20px top -473px;
+color:red;
+padding-right:20px;
+}
+
+.QCphrases{
+padding-left: 25px;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+.QCphrasesTitle{
+margin-top:3px;
+margin-right:15px;
+}
+
+.QCPageLogReport{
+background-color: #F0FDAB;
+margin-right: 19px;
+margin-left: 10px;
+}
+.QCPageLogReport .panel-heading{
+height:30px;
+background-color: #F0FDAB;
+font-size: 12px;
+border-radius:none;
+}
+
+.QCPageLogReport .panel {
+margin-bottom: 5px;
+background-color: #F0FDAB;
+}
+.QCPageLogReport .panel-body{
+padding: 0px;
+border: none;
+margin-top: 5px;
+background-color: #F0FDAB;
+}
+.revertQC{
+	margin-left: -200px;
+	margin-top: 9px;
+	position: absolute;
+	z-index: 100;
+}
+
+.SingleQCReviewList .arrow-left {
+    float: right;
+    height: 0;
+    margin-right: -42px;
+    margin-top: 0;
+    position: relative;
+    width: 0;
+}
+.SingleQCReviewList{
+padding-bottom:20px;
+margin-bottom:-34px;
+}
+.restoreStagingForReview{
+	margin-left: -427px;
+margin-top: -43px;
+position: absolute;
+z-index: 100;
+}
+/*******************************END QC Pages ***************************************************/
+
+
+/*******************************Keyword Tags ***************************************************/
+.tags li{
+height:auto;
+background: none;
+border: none;
+}
+.nav > li > .AddkeywordsTags{
+	float:left;
+	height:24px;
+	line-height:24px;
+	position:relative;
+	font-size:14px;
+	font-weight:bold;
+	margin-left:10px;
+	background:	#d9533d;
+	color:#fff;
+	text-decoration:none;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;	
+	border-radius:4px;
+	padding: 0px 10px;
+}
+.nav > li > .disabled{
+	background:#555;
+
+}
+.AddkeywordsTags:focus, .AddkeywordsTags:active, .AddkeywordsTags:hover{
+	float:left;
+	height:24px;
+	line-height:24px;
+	position:relative;
+	font-size:14px;
+	font-weight:bold;
+	margin-left:10px;
+	background:#cc3300;
+	color:#fff;
+	text-decoration:none;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;	
+	border-radius:4px;
+	padding: 0px 10px;
+}
+.tags .keywordsTags{
+	float:left;
+	height:24px;
+	line-height:24px;
+	position:relative;
+	font-size:11px;
+	margin-left:20px;
+	padding:0 10px 0 12px;
+	background:#0089e0;
+	color:#fff;
+	text-decoration:none;
+	-moz-border-radius-bottomright:4px;
+	-webkit-border-bottom-right-radius:4px;	
+	border-bottom-right-radius:4px;
+	-moz-border-radius-topright:4px;
+	-webkit-border-top-right-radius:4px;	
+	border-top-right-radius:4px;	
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;	
+	border-bottom-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;	
+	border-top-left-radius:0px;	
+	} 
+.tags .keywordsTags:before{
+	content:"";
+	float:left;
+	position:absolute;
+	top:0;
+	left:-12px;
+	width:0;
+	height:0;
+	border-color:transparent #0089e0 transparent transparent;
+	border-style:solid;
+	border-width:12px 12px 12px 0;		
+	}
+.tags .keywordsTags:after{
+	content:"";
+	position:absolute;
+	top:10px;
+	left:0;
+	float:left;
+	width:4px;
+	height:4px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	background:#fff;
+	-moz-box-shadow:-1px -1px 2px #004977;
+	-webkit-box-shadow:-1px -1px 2px #004977;
+	box-shadow:-1px -1px 2px #004977;
+	}
+.tags .newkeywordsTags{
+	background:#C30;
+}
+.tags .newkeywordsTags:before{
+	border-color:transparent #C30 transparent transparent;
+}
+.tags .disabled:before{
+	border-color:transparent #555 transparent transparent;
+}
+.nav .open > .keywordsTags:hover, .nav .open > .keywordsTags:active, .nav .open > .keywordsTags:focus, 
+.tags .keywordsTags:hover, .tags .keywordsTags:active, .tags .keywordsTags:focus
+{background:#555;}
+
+
+.tags .keywordsTags:hover:before, .tags .keywordsTags:active:before, .tags .keywordsTags:focus:before,
+.nav .open > .keywordsTags:hover:before, .nav .open > .keywordsTags:active:before, .nav .open > .keywordsTags:focus:before
+{border-color:transparent #555 transparent transparent;}
+
+/*******************************END Keyword Tags ***************************************************/
+
+
+/*******************************highlight keywords ***************************************************/
+.highlight-positive-polarity{
+	color:green;
+	font-weight: bold;
+}
+.highlight-negative-polarity{
+	color:red;
+	font-weight: bold;
+}
+.highlight-neutral-polarity{
+	color:brown; 
+	
+	font-weight: bold;
+}
+.highlight-none-polarity{
+	color:blue;
+	font-weight: bold;
+}
+
+/*For Making Stars tripadviser */
+span.starsTA, span.starsTA span {
+    display: block;
+    background: url(starsTA.png) 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+span.starsTA span {
+    background-position: 0 0;
+}
+/*For Making Stars holidayIQ */
+span.starsHIQ, span.starsHIQ span {
+    display: block;
+    background: url(HiqStars.png) 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+span.starsHIQ span {
+    background-position: 0 0;
+}
+
+/*******************************End highlight keywords ***************************************************/
+
+/****************************** Tree Css***********************************************/
+
+.tree {
+    min-height:20px;
+    padding:19px;
+    margin-bottom:20px;
+    background-color:#fbfbfb;
+    border:1px solid #999;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05)
+}
+.tree li {
+    list-style-type:none;
+    margin:0;
+    padding:10px 5px 0 5px;
+    position:relative
+}
+.tree li::before, .tree li::after {
+    content:'';
+    left:-20px;
+    position:absolute;
+    right:auto
+}
+.tree li::before {
+    border-left:1px solid #999;
+    bottom:50px;
+    height:100%;
+    top:0;
+    width:1px
+}
+.tree li::after {
+    border-top:1px solid #999;
+    height:20px;
+    top:25px;
+    width:25px
+}
+.tree li div {
+  /*-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+    border:1px solid #999;
+    padding:3px 8px;
+    border-radius:5px; */
+    display:inline-block;
+    text-decoration:none;
+    margin-top: 5px;
+
+}
+.tree li.parent_li>div {
+    cursor:pointer
+}
+.tree>ul>li::before, .tree>ul>li::after {
+    border:0;
+    padding:10px 0px 0 0px;
+}
+.tree li:last-child::before {
+  height: 35px;
+}
+.tree li.parent_li>div:hover, .tree li.parent_li>div:hover+ul li div {
+    background:#eee;
+    border:1px solid #94a0b4;
+    color:#000;
+    float:left;
+}
+.tree ul li input[type="checkbox"]{
+	margin:9px 5px 0 0;
+	    float:left;
+}
+.rsiHeading{
+	font-size: initial;
+    color: white;
+    font-weight: bold;
+}
+
+#polarityDiv{
+    background: scroll right 4px top -157px rgba(94, 98, 96, 0.81);
+    height: 40px;
+    margin-bottom: 0;
+    margin-top: -10px;
+    padding-top: 10px;
+}
+.reply2reviewsAlerts{
+    color: #4e4e4e;
+    font-size: 17px !important;
+    font-weight: bold !important;
+}
+
+.ReviewDetails{
+	display: block;
+    height: auto;
+    padding: 0px !important;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    border: none !important;
+    box-shadow: none;
+    background-color:transparent !important;
+    
+}
+
+
+#editOrganizationSourceMappingForm label{
+	font-size: 15px;
+    font-weight: bold;
+}
+.riHelpIndicator{
+	position: absolute;
+    height: 40px;
+    background-color: #018134;
+    margin-top: -10px;
+    border-bottom: 1px solid #4b78b4;
+    margin-left: -2px;
+}
+
+.riHelpTooltip .qtip-content{
+	max-width: 400px;
+	font-size: 12px
+}
+.qtip { max-width: none !important; }
+
+#sentimentId{
+		position:absolute;font-size: 9px;margin: 0 0 11px 5px;
+	}
+.tooltiptext{
+	padding:0px;
+}
+
+.leftPad {
+    padding-left: 10px;
+}
+
+@media only screen and (min-device-width: 1200px){
+	#sentimentId{
+		position: relative !important;
+	    font-size: 9px;
+	    top: -25px !important;
+	    left: 94px !important;
+	    margin: 0 0 11px 5px;
+	}
+}
+
+/******************************End ****************************************************/ 
